@@ -500,15 +500,15 @@ main {
     }
 
     .movie-card {
-        width: 120px;
+        width: 80px;
     }
 
     .movie-card img {
-        height: 150px;
+        height: 80px;
     }
 
     .movie-card h3 {
-        font-size: 12px;
+        font-size: 8px;
     }
 
     .modal-content {
@@ -516,7 +516,7 @@ main {
     }
 
     .modal-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
