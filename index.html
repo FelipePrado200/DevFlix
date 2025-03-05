@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevFlix</title>
+    <link rel="icon" href="./Icon/dev.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="movies.js"></script>
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Nome de usuário" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="login-error" style="color: red; display: none;">Usuário ou senha incorretos.</p>
+            <p>Não tem uma conta? <a href="#" id="show-register">Registrar</a></p>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <h2>Registrar</h2>
+            <form id="register-form">
+                <input type="text" id="register-username" placeholder="Nome de usuário" required>
+                <input type="password" id="register-password" placeholder="Senha" required>
+                <input type="password" id="confirm-password" placeholder="Confirmar senha" required>
+                <button type="submit">Registrar</button>
+            </form>
+            <p id="register-error" style="color: red; display: none;">As senhas não coincidem.</p>
+            <p>Já tem uma conta? <a href="#" id="show-login">Fazer login</a></p>
+        </div>
+    </div>
+
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loader"></div> 
+            <h2 id="welcome-message"></h2> 
+        </div>
+    </div>
+
+
+    <div id="main-content" style="display: none;">
+        <header>
+            <h1>DevFlix</h1>
+            <div>
+                <input type="text" id="search" placeholder="Pesquisar filme...">
+                <select id="genre-filter">
+                    <option value="">Todos os Gêneros</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Terror">Terror</option>
+                </select>
+                <button id="logout-button">Logout</button>
+            </div>
+        </header>
+
+        <main>
+            <div id="movie-sections"></div>
+        </main>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <p><strong>Ano:</strong> <span id="modal-year"></span></p>
+                <p><strong>Gênero:</strong> <span id="modal-genre"></span></p>
+                <div id="modal-rating" class="rating">
+                    <span data-value="1">★</span>
+                    <span data-value="2">★</span>
+                    <span data-value="3">★</span>
+                    <span data-value="4">★</span>
+                    <span data-value="5">★</span>
+                </div>
+                <p><strong>Avaliação:</strong> <span id="modal-average-rating">Nenhuma</span></p>
+                <button id="favorite-button">Adicionar aos Favoritos</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
