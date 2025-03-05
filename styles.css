@@ -306,6 +306,9 @@ main {
     justify-content: center;
     align-items: center;
 }
+p{
+    color: white;
+}
 
 #modal-description {
     font-size: 1.1rem;
@@ -477,9 +480,7 @@ main {
 .rating span:hover {
     color: gold;
 }
-p{
-    color:white;
-}
+
 @media (max-width: 600px) {
     header {
         display: flex;
