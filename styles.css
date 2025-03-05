@@ -67,8 +67,9 @@ body::before {
 }
 
 header {
+    max-height: 250px;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
@@ -478,8 +479,13 @@ main {
 }
 @media (max-width: 600px) {
     header {
+        display: flex;
         padding: 15px;
         flex-direction: column;
+    }
+    header div{
+        display: flex;
+        flex-direction: column;        
     }
 
     header h1 {
@@ -487,7 +493,10 @@ main {
     }
 
     header input, header select {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
+    }
+    div button{
+        font-size: 0.5rem;
     }
 
     .movie-card {
