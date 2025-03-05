@@ -306,7 +306,8 @@ main {
     justify-content: center;
     align-items: center;
 }
-p{
+.modal-content p {
+    margin-top: 1rem;
     color: white;
 }
 
